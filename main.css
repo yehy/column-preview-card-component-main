@@ -1,0 +1,151 @@
+:root {
+
+    /*primary*/
+
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+
+    /*neutral*/
+
+    --paragraphs: hsla(0, 0%, 100%, 0.75);
+
+    /*(background, headings, buttons)*/
+
+    --light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Big Shoulders Display', cursive;
+    background-color: var(--light-gray);
+}
+
+main {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.container-of-shape {
+    max-width: 900px;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: left;
+    display: flex;
+}
+
+.container {
+    width: calc(100% / 3);
+    padding: 40px 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.clear-fix {
+    clear: both;
+}
+
+
+.sedan {
+    background-color: var(--Bright-orange);
+}
+
+.suvs {
+    background-color: var(--Dark-cyan);
+}
+
+.luxury {
+    background-color: var(--Very-dark-cyan);
+}
+
+.headings {
+    color: var(--light-gray);
+    font-size: 2.5em;
+    font-weight: lighter;
+    margin-top: 30px;
+}
+
+.button {
+    border-radius: 25px 25px;
+    overflow: hidden;
+    margin-top: 100px;
+    text-align: center;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    padding: 12px 35px;
+    border: none;
+    background-color: var(--light-gray);
+    font-size: 1em;
+    font-family: 'Lexend Deca', sans-serif;
+    text-transform: capitalize;
+    border: 3px solid var(--light-gray);
+    border-radius: 25px 25px;
+}
+
+
+
+.sedan-b a {
+    color: var(--Bright-orange);
+}
+
+.suvs-b a {
+    color: var(--Dark-cyan);
+}
+
+.luxury-b a {
+    color: var(--Very-dark-cyan);
+}
+
+a:hover {
+    background: none;
+    color: var(--light-gray);
+}
+
+
+p {
+    color: var(--paragraphs);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    margin-top: 30px;
+    line-height: 1.5em;
+    font-weight: 200;
+}
+
+@media (max-width: 768px) {
+    .container-of-shape {
+        flex-direction: column;
+        max-width: 400px;
+        align-items: center;
+        justify-content: center;
+        margin: 30px 20px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 40px 50px;
+    }
+
+    br {
+        display: none;
+    }
+}
+
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
